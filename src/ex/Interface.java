@@ -4,30 +4,50 @@
  * and open the template in the editor.
  */
 package ex;
-import java.util.Scanner;
 
 public class Interface
 {
-    Scanner scan = new Scanner(System.in);
-    
     public void menu(){
-        LinkedList<Integer> list = new LinkedList<Integer>();
+        /*
+        a.compareTo(b)
+        0 - igual
+        0< - a menor q b
+        0> - a maior q b
+        */
+        Conjunto<Integer> lista = new Conjunto<Integer>();
+        Conjunto<Integer> listb = new Conjunto<Integer>();
         
-        boolean emp = list.empty();
-        System.out.println(emp == true ? "vazio" : "tem items");
+        //boolean emp = lista.empty();
+        //System.out.println(emp == true ? "vazio" : "tem items");
         
-        for (int i = 0; i < 10; i++) {
-            list.add(new Node(i));
-        }
+        /*for (int i = 0; i < 10; i++) {
+            lista.add(i);
+        }*/
         
-        emp = list.empty();
-        System.out.println(emp == true ? "vazio" : "tem items");
+        lista.add(41);
+        lista.add(20);
+        lista.add(10);
+        lista.add(14);
+        lista.add(63);
+        lista.add(98);
+        lista.add(12);
+        lista.add(77);
         
-        list.remove(new Node(2));
+        //listb.add(4);
+        //listb.add(7);
         
-        //boolean cont = list.contains(new Node(4));
-        //System.out.println(cont == true ? "Existe" : "Não Existe");
+        //Conjunto<Integer> listc = lista.intersection(listb);
+        
+        //emp = lista.empty();
+        //System.out.println(emp == true ? "vazio" : "tem items");
+        
+        //lista.remove(2);
+        
+        //Node cont = list.contains(14);
+        //System.out.println(cont == null ? "Não Existe" : "Existe");
+        
+        lista.insertionSort();
             
-        //list.print();
+        lista.print();
     }
 }
